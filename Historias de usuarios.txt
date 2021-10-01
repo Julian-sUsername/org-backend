@@ -1,0 +1,33 @@
+Proyecto acogelo-org
+
+Una Entidad sin ánimo de Lucro que nos solicita la creación de un sitio web en el que los usuarios puedan dar en adopción mascotas, y otros puedan postularse como adoptantes.
+
+Tarea 0.0.1: Diseñar el diagrama de despliegue y el diagrama de componentes.
+Tarea 0.0.2: Diseñar el modelo de la base de datos
+Tarea 0.0.3: Construir base de datos en PostgreSQL
+Tarea 0.0.4: Desplegar la base de datos en Heroku
+
+EPICs
+Epic 1: Gestionar el módulo de adoptar
+
+Historia de usuario 1.1: Como usuario que adopta, quiero buscar una mascota en particular, filtrando las mascotas disponibles en función de su tipo, raza, edad, género, ubicación (departamento y/o ciudad), si tiene discapacidad o no, "historia clínica", etc. Para poder adoptarla.
+
+Tarea 1.1.0: Construir un servicio web para registrarse y/o ingresar con usuario y contraseña
+Tarea 1.1.1: Construir un servicio web para consultar las mascotas disponibles en la base de datos
+Tarea 1.1.2: Diseñar los mockups correspondientes a las UI de login, y el catálogo de mascotas disponibles
+Tarea 1.1.3: Construir la UI para mostrar la página de login/registro
+Tarea 1.1.4: Construir la UI para mostrar el catálogo de mascotas
+Tarea 1.1.5: Diseñar los casos de prueba para el servicio web de consulta de mascotas disponibles en la base de datos
+Tarea 1.1.6: Llevar a cabo los casos de prueba para el servicio web de consulta de mascotas utilizando PostMan
+Tarea 1.1.7: Diseñar los casos de prueba para la utilización de las UI relacionadas con el login, registro y el catálogo de mascotas
+Tarea 1.1.8: Llevar a cabo los casos de prueba para las UI relacionadas con el login, registro y el catálogo de mascotas
+Tarea 1.1.9: Desplegar el servicio web de consulta de mascotas disponibles en el backend
+Tarea 1.1.10: Desplegar las UI relacionadas con la página de login/registro y con el catálogo de mascotas disponibles en el frontend
+
+Epic 2: Gestionar el módulo de dar en adopción
+
+Historia de usuario 2.1: Como usuario que pone en adopción, quiero ingresar la mayor cantidad de datos posibles acerca de mi mascota, fotos, tipo, raza, género, ubicación (departamento y/o ciudad), si tiene discapacidad o no, historia clínica, etc.
+
+
+
+Epic 3: Gestionar el módulo de control de usuarios
