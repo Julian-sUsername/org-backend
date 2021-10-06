@@ -1,1 +1,1 @@
-Dónde le pedimos a unicorn que ejecute el archivo wsgi del proyecto
+web: gunicorn authProject.wsgi
