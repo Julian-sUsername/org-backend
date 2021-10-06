@@ -7,7 +7,7 @@ backend from project using Python and Django
 mkdir \<directorio>  
 cd \<directorio>  
 git init  
-git clone -b dev --single-branch <url>  
+git clone -b dev --single-branch \<url>  
 cd \<project>  
 git branch -a (verificar que sea dev)  
 
