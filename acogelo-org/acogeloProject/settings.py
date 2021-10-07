@@ -98,6 +98,8 @@ WSGI_APPLICATION = 'acogeloProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#Descomentar toda la sección de DATABASES con HOST "ec2-xx-xx-xx.amazonaws.com" para cuando se vaya a realizar el despliegue en producción
+"""
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -106,6 +108,14 @@ DATABASES = {
     'PASSWORD': '1bd65935cb93010a7893b09c7b2b4473fa3de1be892199176d4209aab10ebbcc',
     'HOST': 'ec2-34-233-187-36.compute-1.amazonaws.com',
     'PORT': '5432',
+    }
+}
+"""
+#Para hacer los desarrollos y pruebas de forma local
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -153,5 +163,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import django_heroku
-django_heroku.settings(locals()) 
+#import django_heroku
+#django_heroku.settings(locals()) 

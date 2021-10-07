@@ -33,3 +33,4 @@ Dar clic abajo en el botón “Test connection” para verificar
 ## Luego, desde el Visual Studio  
 python manage.py makemigrations acogeloApp → para crear los archivos de las migraciones  
 python manage.py migrate → para efectuar la migración  
+
