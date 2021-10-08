@@ -1,11 +1,13 @@
-# Historial de errores que se han presentado y c髆o se han solucionado
+# Historial de errores que se han presentado y c贸mo se han solucionado  
 
-## Migraciones
+## Migraciones Error 1
 
-Descripci髇: Durante la ejecuci髇 de "python manage.py makemigrations acogeloApp" o "python manage.py migrate", aparece el error:  
+### Descripci贸n:  
+Durante la ejecuci贸n de "python manage.py makemigrations acogeloApp" o "python manage.py migrate", aparece el error:  
   
-django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency acogeloApp.0001_initial on database 'default'.
+django.db.migrations.exceptions.InconsistentMigrationHistory: Migration admin.0001_initial is applied before its dependency acogeloApp.0001_initial on database 'default'.  
   
-Soluci髇: Esto es debido a que ya existen datos en la base de datos. Estando en un entorno de desarrollo, la soluci髇 m醩 r醦ida es ir a la consola de Heroku para Postgres, dar clic en la pesta馻 "Settings" y luego "Reset database". 
-En caso que eso no lo solucione, tambi閚 se pueden eliminar todos los archivos de la carpeta "migrations" A EXCEPCI覰 del archivo __init__.py
+### Soluci贸n: 
+Esto es debido a que ya existen datos en la base de datos. Estando en un entorno de desarrollo, la soluci贸n m谩s r谩pida es ir a la consola de Heroku para Postgres, dar clic en la pesta帽a "Settings" y luego "Reset database". 
+En caso que eso no lo solucione, tambi茅n se pueden eliminar todos los archivos de la carpeta "migrations" A EXCEPCI脫N del archivo \__init__.py
 
