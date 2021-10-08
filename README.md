@@ -19,7 +19,7 @@ python -m venv env
 .\env\Scripts\activate  
 pip install django  
 pip install djangorestframework  
-pip install psycopg2
+pip install psycopg2  
 pip install pillow (solo para cuando se va a usar ImageField type en los módulos)  
 Realizar las modificaciones al código   
 git add \<cada archivo, evitar el uso del comodín *>  
