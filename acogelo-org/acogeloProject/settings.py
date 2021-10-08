@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'acogeloProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#Descomentar toda la sección de DATABASES con HOST "ec2-xx-xx-xx.amazonaws.com" para cuando se vaya a realizar el despliegue en producción
+#Descomentar toda la secciï¿½n de DATABASES con HOST "ec2-xx-xx-xx.amazonaws.com" para cuando se vaya a realizar el despliegue en producciï¿½n
 """
 DATABASES = {
     'default': {

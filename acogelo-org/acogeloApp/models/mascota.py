@@ -1,5 +1,4 @@
 from django.db import models
-from .usuario import User
 
 class Mascota(models.Model):
 
