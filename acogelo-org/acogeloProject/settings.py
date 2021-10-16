@@ -99,28 +99,28 @@ WSGI_APPLICATION = 'acogeloProject.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 #Descomentar toda la secci�n de DATABASES con HOST "ec2-xx-xx-xx.amazonaws.com" para cuando se vaya a realizar el despliegue en producci�n
-"""
+
 DATABASES = {
-    'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'dfkqmor1agl1kv',
-    'USER': 'cxzibynxbkvpnt',
-    'PASSWORD': '1bd65935cb93010a7893b09c7b2b4473fa3de1be892199176d4209aab10ebbcc',
-    'HOST': 'ec2-34-233-187-36.compute-1.amazonaws.com',
-    'PORT': '5432',
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dfkqmor1agl1kv',
+        'USER': 'cxzibynxbkvpnt',
+        'PASSWORD': '1bd65935cb93010a7893b09c7b2b4473fa3de1be892199176d4209aab10ebbcc',
+        'HOST': 'ec2-34-233-187-36.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-"""
+
 
 #Para hacer los desarrollos y pruebas de forma local
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 
 # Password validation

@@ -28,12 +28,12 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         accountData = validated_data.pop('mascota')
         userInstance = User.objects.create(**validated_data)
-        Account.objects.create(user=userInstance, **accountData)
+        User.objects.create(user=userInstance, **accountData)
         return userInstance
     
     def to_representation(self, obj):
         user = User.objects.get(id=obj.id)
-        mascota = Account.objects.get(user=obj.id)
+        mascota = Mascota.objects.get(user=obj.id)
         return {
             'id': user.id,
             'username': user.username,
