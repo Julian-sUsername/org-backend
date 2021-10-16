@@ -12,11 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         mascotaData = validated_data.pop('mascota')
         userInstance = User.objects.create(**validated_data)
-<<<<<<< HEAD
-        User.objects.create(user=userInstance, **accountData)
-=======
         Mascota.objects.create(user=userInstance, **mascotaData)
->>>>>>> d4c4dcffd7e9748a77235c6b6ab47f0933223c35
         return userInstance
     
     def to_representation(self, obj):
