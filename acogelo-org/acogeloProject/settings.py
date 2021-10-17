@@ -103,10 +103,10 @@ WSGI_APPLICATION = 'acogeloProject.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dfkqmor1agl1kv',
-        'USER': 'cxzibynxbkvpnt',
-        'PASSWORD': '1bd65935cb93010a7893b09c7b2b4473fa3de1be892199176d4209aab10ebbcc',
-        'HOST': 'ec2-34-233-187-36.compute-1.amazonaws.com',
+        'NAME': 'd8gir8ojgq5j4j',
+        'USER': 'ehzvfuqpbupsiw',
+        'PASSWORD': '1cfcd9d3bdfdd683833f0f0bceacfd5b010ac33974d2c84d058bf50900fd418d',
+        'HOST': 'ec2-34-203-91-150.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -165,6 +165,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 import django_heroku
 django_heroku.settings(locals()) 
