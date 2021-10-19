@@ -35,3 +35,17 @@ Dar clic abajo en el botón “Test connection” para verificar
 python manage.py makemigrations acogeloApp → para crear los archivos de las migraciones  
 python manage.py migrate → para efectuar la migración  
 
+# Local
+instalar el cliente
+npm install -g @vue/cli
+vue --version
+
+pip install django-cors-headers
+
+npm run serve
+
+## Servidor 
+npm install axios
+npm install jwt-decode
+
+npm install express serve-static --save
