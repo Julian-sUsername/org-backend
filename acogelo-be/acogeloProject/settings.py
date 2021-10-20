@@ -117,6 +117,7 @@ WSGI_APPLICATION = 'acogeloProject.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 """
+# DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRODUCCIÓN* EN HEROKU
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -128,13 +129,30 @@ DATABASES = {
     }
 }
 """
+
+
+# DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRUEBAS* EN HEROKU
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd5ge2c748v7b0o',
+        'USER': 'qmtvzjxhuzaimi',
+        'PASSWORD': '31d54965259c11b598695ffda15f3a3f346870454ba0276c4ecdab2522ac8f9e',
+        'HOST': 'ec2-54-208-17-82.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
+
+
+"""
+# DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRUEBAS* EN TU MÁQUINA LOCAL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 
 # Password validation
