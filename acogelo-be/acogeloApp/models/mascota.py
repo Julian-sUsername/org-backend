@@ -1,9 +1,8 @@
 from django.db import models
-from .usuario import User
 
 class Mascota(models.Model):
 
-    id_masc = models.AutoField(primary_key=True)
+    id_masc = models.AutoField(primary_key=True, default=0)
     nombre_masc = models.CharField(max_length = 50, unique=False)
     descripcion_larga_masc = models.TextField()
     tipo_masc = models.CharField(max_length = 20, unique=False)

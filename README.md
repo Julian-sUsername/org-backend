@@ -19,6 +19,7 @@ python -m venv env
 .\env\Scripts\activate  
 pip install django  
 pip install djangorestframework  
+pip install psycopg2  
 pip install pillow (solo para cuando se va a usar ImageField type en los módulos)  
 Realizar las modificaciones al código   
 git add \<cada archivo, evitar el uso del comodín *>  
@@ -34,3 +35,17 @@ Dar clic abajo en el botón “Test connection” para verificar
 python manage.py makemigrations acogeloApp → para crear los archivos de las migraciones  
 python manage.py migrate → para efectuar la migración  
 
+# Local
+instalar el cliente
+npm install -g @vue/cli
+vue --version
+
+pip install django-cors-headers
+
+npm run serve
+
+## Servidor 
+npm install axios
+npm install jwt-decode
+
+npm install express serve-static --save
