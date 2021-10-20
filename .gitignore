@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 
 /env/
+/.env/
 .acogelo-org/history
 .acogelo-org/history/
