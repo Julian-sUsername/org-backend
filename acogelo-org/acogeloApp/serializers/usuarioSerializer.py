@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from acogeloApp.models.usuario import User
+from django.db import models
+#from acogeloApp.models.usuario import User
 from acogeloApp.models.mascota import Mascota
 from acogeloApp.serializers.mascotaSerializer import MascotaSerializer
 
