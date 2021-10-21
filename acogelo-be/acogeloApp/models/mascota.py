@@ -14,11 +14,3 @@ class Mascota(models.Model):
     estado_adopcion_masc = models.CharField(max_length = 15, unique=False)
     ruta_foto_masc = models.ImageField(max_length = 200, unique=False)
     descripcion_foto_masc = models.CharField(max_length = 50, unique=False)
-
-"""
-    id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, related_name='account', on_delete=models.CASCADE)
-    balance = models.IntegerField(default=0)
-    lastChangeDate = models.DateTimeField()
-    isActive = models.BooleanField(default=True)
-"""
