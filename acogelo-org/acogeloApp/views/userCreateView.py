@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from acogeloApp.serializers.usuarioSerializer import UserSerializer
 
-#definición de la clase UserCreateView (que abstrae de APIView)
+#definicion de la clase UserCreateView (que abstrae de APIView)
 class UserCreateView(views.APIView):
     def post(self, request, *args, **kwargs):
         serializer = UserSerializer(data=request.data)
