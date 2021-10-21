@@ -4,6 +4,7 @@ from acogeloApp.models.mascota import Mascota
 from acogeloApp.serializers.mascotaSerializer import MascotaSerializer
 
 
+#class UserSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User

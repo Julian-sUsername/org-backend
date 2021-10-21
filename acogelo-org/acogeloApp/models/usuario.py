@@ -3,7 +3,8 @@ from .mascota import Mascota
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
 
-class User(AbstractBaseUser, PermissionsMixin):
+#class User(AbstractBaseUser, PermissionsMixin):
+class User(models.Model):
     id_user = models.BigAutoField(primary_key=True)
     username = models.CharField(max_length = 15, unique=True)
     password = models.CharField(max_length = 256)
