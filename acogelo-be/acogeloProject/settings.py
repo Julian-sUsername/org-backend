@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 
 # Simple JWT los atributos que se desea que tengan los tokens generados por la librería.
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=40),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
@@ -114,44 +114,28 @@ WSGI_APPLICATION = 'acogeloProject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-"""
-# DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRODUCCIÓN* EN HEROKU
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd98iia8d4t4akt',
-        'USER': 'yfkoqcdhhocwah',
-        'PASSWORD': 'da33d2ad12a8fda396a85bc405506de939f40dd54ebd9047d69d5dd2ebecf93b',
-        'HOST': 'ec2-107-23-143-66.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
-"""
-
-
 # DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRUEBAS* EN HEROKU
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd5ge2c748v7b0o',
-        'USER': 'qmtvzjxhuzaimi',
-        'PASSWORD': '31d54965259c11b598695ffda15f3a3f346870454ba0276c4ecdab2522ac8f9e',
-        'HOST': 'ec2-54-208-17-82.compute-1.amazonaws.com',
+        'NAME': 'de6fotneukdhg3',
+        'USER': 'urlywwdxliunqo',
+        'PASSWORD': '3807453eadc470c770a5f6a552a8669d998817d27c0389b05a2d32147a92be28',
+        'HOST': 'ec2-3-219-103-45.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
-
-
 """
+
 # DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRUEBAS* EN TU MÁQUINA LOCAL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db2.sqlite3',
     }
 }
-"""
+
 
 
 # Password validation
@@ -190,6 +174,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = '/static/'
 STATIC_URL = '/static/'
 
 # Default primary key field type
