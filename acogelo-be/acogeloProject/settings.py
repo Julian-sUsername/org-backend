@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import django_heroku
 from pathlib import Path
 from datetime import timedelta
 
@@ -30,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Todas las url pueden usar el servidor
-CORS_ALLOW_ALL_ORIGINS = True
+#CORS_ALLOW_ALL_ORIGINS = True
 
 # Personalizar los permisos de las url que pueden usar el servidor
 """
@@ -54,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'acogeloApp',
-    'corsheaders',
+    #'corsheaders',
 ]
 
 # Simple JWT los atributos que se desea que tengan los tokens generados por la librería.
@@ -77,7 +76,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    #"corsheaders.middleware.CorsMiddleware",
 ]
 
 # indicarle al sistema de autenticación provisto por Django REST Framework que permita a Simple JWT el acceso a dicho sistema,
@@ -117,6 +116,7 @@ WSGI_APPLICATION = 'acogeloProject.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 """
+# DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRODUCCIÓN* EN HEROKU
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -128,13 +128,30 @@ DATABASES = {
     }
 }
 """
+
+
+# DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRUEBAS* EN HEROKU
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd5ge2c748v7b0o',
+        'USER': 'qmtvzjxhuzaimi',
+        'PASSWORD': '31d54965259c11b598695ffda15f3a3f346870454ba0276c4ecdab2522ac8f9e',
+        'HOST': 'ec2-54-208-17-82.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
+
+
+"""
+# DESCOMENTAR ESTA BASE DE DATOS SI ES PARA EL DESPLIEGUE EN *PRUEBAS* EN TU MÁQUINA LOCAL
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+"""
 
 
 # Password validation
@@ -180,4 +197,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import django_heroku
 django_heroku.settings(locals())

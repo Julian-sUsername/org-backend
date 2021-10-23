@@ -40,7 +40,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     dpto_residencia = models.CharField(max_length = 50, unique=False, null=True)
     ciudad_residencia = models.CharField(max_length = 50, unique=False, null=True)
     aceptacion_termycond = models.BooleanField(default=False, unique=False)
-    # id_masc = models.ForeignKey(Mascota, related_name='mascota', on_delete=models.CASCADE, default=0)
+    id_masc = models.ForeignKey(Mascota, related_name='mascota', on_delete=models.CASCADE, default=0)
     
     def save(self, **kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN'
