@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Todas las url pueden usar el servidor
-#CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Personalizar los permisos de las url que pueden usar el servidor
 """
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'acogeloApp',
-    #'corsheaders',
+    'corsheaders',
 ]
 
 # Simple JWT los atributos que se desea que tengan los tokens generados por la librería.
@@ -76,7 +76,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #"corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 # indicarle al sistema de autenticación provisto por Django REST Framework que permita a Simple JWT el acceso a dicho sistema,
